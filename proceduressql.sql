@@ -1,12 +1,3 @@
-CREATE TABLE produto (
-    id    NUMBER
-        GENERATED ALWAYS AS IDENTITY
-    PRIMARY KEY,
-    nome  VARCHAR2(30),
-    tipo  VARCHAR2(30),
-    marca VARCHAR2(30)
-);
-
 CREATE OR REPLACE PROCEDURE create_produto( 
     p_nome  produto.nome%TYPE,
     p_tipo  produto.tipo%TYPE,
@@ -25,3 +16,7 @@ BEGIN
 
     COMMIT;
 END create_produto;
+
+CALL create_produto ('Touca', 'Acessório', 'Nike');
+
+SELECT * FROM PRODUTO ORDER BY ID;
