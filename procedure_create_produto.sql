@@ -17,6 +17,6 @@ BEGIN
     COMMIT;
 END create_produto;
 
-CALL create_produto ('Touca', 'Acessório', 'Nike');
+CALL create_produto ('Touca', 'AcessÃ³rio', 'Nike');
 
 SELECT * FROM PRODUTO ORDER BY ID;
