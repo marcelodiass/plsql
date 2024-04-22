@@ -1,0 +1,12 @@
+CREATE OR REPLACE PROCEDURE delete_produto(p_id PRODUTO.ID%TYPE)
+IS
+BEGIN
+    DELETE FROM PRODUTO
+    WHERE ID = p_id;
+
+    COMMIT;
+END delete_produto;
+
+CALL delete_produto(1);
+
+SELECT * FROM PRODUTO ORDER BY ID;
